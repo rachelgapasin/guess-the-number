@@ -2,15 +2,18 @@ from art import logo
 from random import randint
 
 # set difficulty to determine number of attempts
+EASY_LEVEL_TURNS = 10
+HARD_LEVEL_TURNS = 5
+
 def set_difficulty():
   difficulty = ""
   while difficulty not in ["easy", "hard"]:
     difficulty = input('Choose a difficulty. Type "easy" or "hard": ')
     
   if difficulty == "easy":
-    return 10
+    return EASY_LEVEL_TURNS
   elif difficulty == "hard":
-    return 5
+    return HARD_LEVEL_TURNS
   
 # check user's guess with answer
 def check_answer(guess, answer, attempts):
